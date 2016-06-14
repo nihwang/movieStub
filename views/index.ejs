@@ -15,8 +15,9 @@
 	<br />
 	<h4>Movie Screening: </h4>
 	<ul>
-		<li ng-repeat="movie in movies">
+		<li ng-repeat="movie in movies | orderBy: 'name': true">
 			{{movie.id}} - {{movie.name}} - {{movie.rating}}
 		</li>
 	</ul>
+	<pre>{{ movies | json }}</pre>
 </body>
